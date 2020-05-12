@@ -1,0 +1,21 @@
+# ===================================================================
+# Spring Cloud Config bootstrap configuration for the "prod" profile
+# In prod profile, properties will be overwritten by the ones defined in bootstrap-prod.yml
+# ===================================================================
+spring:
+  profiles:
+    active: prod
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        composite:
+          - type: git
+            uri: https://github.com/jhipster/jhipster-registry-sample-config
+      profile: prod
+      name: cloud-server
+      label: master # toggle to switch to a different version of the configuration as stored in git
+      # it can be set to any label, branch or commit of the configuration source Git repository
+      fail-fast: true
+      retry:
+        max-attempts: 100
