@@ -15,6 +15,8 @@ spring:
         composite:
           - type: native
             search-locations: /media/cesar/Stuff/Dev/java/configrepo
+        prefix: /config
+      fail-fast: true
       label: master # toggle to switch to a different version of the configuration as stored in git
       # it can be set to any label, branch or commit of the configuration source Git repository
       name: config
