@@ -8,19 +8,23 @@
 # ===================================================================
 eureka:
   instance:
+    hostname: ${DOMAIN_NAME}
+    appname: config
+    instance-id: config:${spring.application.instance-id:${random.value}}
     prefer-ip-address: true
+    status-page-url-path: ${management.endpoints.web.base-path}/info
+    health-check-url-path: ${management.endpoints.web.base-path}/health
     metadata-map:
       profile: ${spring.profiles.active}
       version: #project.version#
       git-version: ${git.commit.id.describe:}
       git-commit: ${git.commit.id.abbrev:}
       git-branch: ${git.branch:}
-  client:
-    region: default
 
 management:
   endpoints:
     web:
+      base-path: /management
       exposure:
         include: ['refresh', 'health', 'info']
   info:
