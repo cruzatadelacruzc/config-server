@@ -11,7 +11,7 @@ spring:
         bootstrap: true
         composite:
           - type: git
-            uri: https://github.com/cruzatadelacruzc/microservice-config.git
+            uri: https://github.com/cruzatadelacruzc/microservice-config
         prefix: config
       profile: prod
       name: config
