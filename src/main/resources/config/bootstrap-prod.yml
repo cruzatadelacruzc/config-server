@@ -13,6 +13,9 @@ spring:
           - type: git
             uri: https://github.com/cruzatadelacruzc/microservice-config
         prefix: /config
+        git:
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
       profile: prod
       name: config
       label: master # toggle to switch to a different version of the configuration as stored in git
