@@ -12,11 +12,9 @@ spring:
         composite:
           - type: git
             uri: https://github.com/cruzatadelacruzc/microservice-config
-        prefix: config
+        prefix: /config
       profile: prod
       name: config
       label: master # toggle to switch to a different version of the configuration as stored in git
       # it can be set to any label, branch or commit of the configuration source Git repository
       fail-fast: true
-      retry:
-        max-attempts: 100

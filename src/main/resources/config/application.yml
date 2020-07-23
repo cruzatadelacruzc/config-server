@@ -19,6 +19,7 @@ eureka:
       git-version: ${git.commit.id.describe:}
       git-commit: ${git.commit.id.abbrev:}
       git-branch: ${git.branch:}
+    hostname: localhost
 
 management:
   endpoints:
@@ -36,6 +37,8 @@ management:
 spring:
   application:
     name: config
+  messages:
+    basename: i18n/messages
 
 server:
   port: 8081
