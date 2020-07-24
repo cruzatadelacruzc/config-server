@@ -9,13 +9,12 @@ spring:
     config:
       server:
         bootstrap: true
-        composite:
-          - type: git
-            uri: https://github.com/cruzatadelacruzc/microservice-config
-        prefix: /config
         git:
           username: ${GIT_USERNAME}
           password: ${GIT_PASSWORD}
+          default-label: master
+          uri: https://github.com/cruzatadelacruzc/microservice-config
+        prefix: /config
       profile: prod
       name: config
       label: master # toggle to switch to a different version of the configuration as stored in git
