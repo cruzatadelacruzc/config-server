@@ -50,3 +50,6 @@ server:
     session:
       cookie:
         http-only: true
+logging:
+  level:
+    ROOT: info

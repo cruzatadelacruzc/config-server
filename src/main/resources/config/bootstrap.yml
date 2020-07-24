@@ -7,7 +7,6 @@ spring:
     name: config
   profiles:
     active: dev
-    include: composite
   cloud:
     config:
       server:
