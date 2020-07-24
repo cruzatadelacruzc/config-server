@@ -37,6 +37,10 @@ management:
 spring:
   application:
     name: config
+  security:
+    user:
+      name: admin
+      password: ${CONFIG_PASSWORD:config}
   messages:
     basename: i18n/messages
 
